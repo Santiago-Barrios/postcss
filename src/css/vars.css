@@ -1,0 +1,59 @@
+:root{
+  --darkColor:#15192a;
+  --ligthColor: gray;
+  --viewportHeight: 50vh;
+}
+:root{
+  --button:{
+    border: 1px solid var(--ligthColor);
+    border-radius: 5px;
+    background: var(--darkColor);
+    color: var(--ligthColor);
+    padding: .5em 2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 5px solid var(--ligthColor);
+    font-size: .5em;
+  };
+}
+/* @custom-media --small screen and (max-width: 768px); */
+@custom-media --extra-small (max-width: 480px);
+@custom-media --small screen and (width < 768px);
+@custom-media --medium  screen and (width >= 768px);
+@custom-media --large screen and (width >= 1024px);
+
+
+@media (--small){
+  body{
+    border: 10px solid blue;
+  }
+  .sidebar{
+    /* background: pink; */
+  }
+  /* .home{
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 200px;
+    grid-template-areas: "primary"
+                         "sidebar"
+                         "featuring";
+  } */
+  .featuring{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+  }
+}
+@media(--extra-small){
+  body{
+    border: 10px solid orange;
+  }
+}
+@media(--medium){
+  body{
+    /* border: 10px solid orange; */
+  }
+
+}

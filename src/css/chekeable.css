@@ -1,0 +1,27 @@
+/*  @custom-selector : --nombreDelSelector .elemento> .hijo, .elemento2 > .hijo */ 
+@custom-selector :--chekeable .checkbox-label, .radio-label;
+@custom-selector :--hightlight :hover, :active;
+
+
+:--chekeable {
+  cursor: pointer;
+  user-select: none;
+  padding-left: 3px 7px;
+  border: 1px solid color(red b(10%));
+  border-bottom: 3px solid red;
+  color: gray(100);
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+:--chekeable:--hightlight {
+  background: black;
+  color:white;
+}
+
+.checkbox:checked + .primaryPlaylist-list{
+  display: none;
+}
+

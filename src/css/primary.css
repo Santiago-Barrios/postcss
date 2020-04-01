@@ -1,0 +1,14 @@
+
+.primary-search {
+  align-self: center;
+}
+
+.primary-user {
+  justify-self: end;
+  margin: 5px 0;
+}
+
+.primary-list {
+  grid-area: list;
+  overflow: auto;
+}

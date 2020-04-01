@@ -1,0 +1,48 @@
+/*home layout*/
+.home {
+  background: var(--color);
+  display: grid;
+  height: calc(var(--viewportHeight) * 2);
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 1fr 0;
+  grid-template-areas: "sidebar primary"
+                       "sidebar featuring";
+  /* background: green; */
+  @media (--small){
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 200px;
+    grid-template-areas: "primary"
+                         "sidebar"
+                         "featuring";
+  }
+}
+
+.home-primary {
+  display: grid;
+  grid-template-areas: "search user"
+                       "list list";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 300px 1fr;
+  padding: 10px;
+  overflow: auto;
+}
+
+.home.search-active {
+  grid-template-rows: 1fr 150px;
+}
+
+.home-sidebar {
+  grid-area: sidebar;
+}
+.home-primary {
+  grid-area: primary;
+}
+.home-featuring {
+  grid-area: featuring;
+  display: grid;
+}
+.home-featuring img {
+  align-self: center;
+  justify-self: center;
+}
